@@ -1,9 +1,11 @@
 # bodge-nano-svg
-Nanosvg bindings. Load SVG files and interoperate with bodge-nanovg.
+Nanosvg bindings. Load SVG files and integrate with bodge-nanovg.
 
-A bit raw (you may need to free foreign structures manually) but here are a few key functions:
+A bit raw (you may need to free foreign structures manually) but here are a few 
 
-svg->nanovg-paint
+# key functions:
+
+## svg->nanovg-paint
 Renders an SVG to an in-memory image. This is able to be drawn with bodge-nanovg as a fill-paint
 i.e 
 ```lisp
@@ -12,7 +14,7 @@ i.e
 ```
 see nanovg docs on how to draw shapes.
 
-svg-draw
+## svg-draw
 Renders an SVG immediately. Translates SVG directly into bodge-nanovg draw calls.
 
  
@@ -83,9 +85,9 @@ If you wish to maintain a registry of SVGs, here's an example:
 ```
 
 Relevant links:
-https://github.com/memononen/nanosvg - the main SVG parsing library
-https://github.com/rezrov/libnanosvg - ... as a shared library
-https://github.com/AkashaP/bodge-nano-svg - ... bindings for such. as well as intergration with:
-https://github.com/memononen/nanovg - the vector graphics rendering library
-https://github.com/borodust/bodge-nanovg - ... bindings for so
-some various cherry picks from PRs i can't really remember right now.
+- https://github.com/memononen/nanosvg the main SVG parsing library
+- https://github.com/rezrov/libnanosvg ... as a shared library
+- https://github.com/AkashaP/nanosvg-blob ... the shared library (uses bodge-blobs-support)
+- https://github.com/AkashaP/bodge-nano-svg ... bindings for such. as well as intergration with:
+- https://github.com/memononen/nanovg the vector graphics rendering library
+- https://github.com/borodust/bodge-nanovg ... bindings for so
